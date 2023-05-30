@@ -4,3 +4,5 @@ and updates upon learning them, you can simply clone this repo to your local mac
 
 modules required PYGAME
 you can install by - pip install pygame
+
+Important: In the main file change the location variable to your directory location in which you clone this repository
