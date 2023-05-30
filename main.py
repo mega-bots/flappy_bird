@@ -3,28 +3,29 @@ import random
 from sys import exit
 import time
 pygame.init()
+location = "/home/prabhas/Desktop/projects/"
 screen = pygame.display.set_mode((800,400))  #Sets the window size (width,height)
 pygame.display.set_caption("GAMING")  #Sets the window title
 clock = pygame.time.Clock() #This is used for FPS
 
-image_surface = pygame.image.load("/home/prabhas/Desktop/projects/sprites/background-night.png")
-ground_surface = pygame.image.load("/home/prabhas/Desktop/projects/sprites/base.png") 
-bluebird_up_surface = pygame.image.load("/home/prabhas/Desktop/projects/sprites/bluebird-upflap.png")
-bluebird_mid_surface = pygame.image.load("/home/prabhas/Desktop/projects/sprites/bluebird-midflap.png")
-bluebird_down_surface = pygame.image.load("/home/prabhas/Desktop/projects/sprites/bluebird-downflap.png")
+image_surface = pygame.image.load(f"{location}/sprites/background-night.png")
+ground_surface = pygame.image.load(f"{location}/sprites/base.png") 
+bluebird_up_surface = pygame.image.load(f"{location}/sprites/bluebird-upflap.png")
+bluebird_mid_surface = pygame.image.load(f"{location}/sprites/bluebird-midflap.png")
+bluebird_down_surface = pygame.image.load(f"{location}/sprites/bluebird-downflap.png")
 bluebird_up_rect = bluebird_up_surface.get_rect(topleft = (300,150))
 bluebird_mid_rect = bluebird_mid_surface.get_rect(topleft = (300,150))
 bluebird_down_rect = bluebird_down_surface.get_rect(topleft = (300,150))
 
 
-jumpsound = pygame.mixer.Sound("/home/prabhas/Desktop/projects/audio/wing.wav")
-hitsound = pygame.mixer.Sound("/home/prabhas/Desktop/projects/audio/hit.wav")
-pointsound = pygame.mixer.Sound("/home/prabhas/Desktop/projects/audio/point.wav")
+jumpsound = pygame.mixer.Sound(f"{location}/audio/wing.wav")
+hitsound = pygame.mixer.Sound(f"{location}/audio/hit.wav")
+pointsound = pygame.mixer.Sound(f"{location}/audio/point.wav")
 
 
-starting_page = pygame.image.load("/home/prabhas/Desktop/projects/sprites/message.png")
-ending_page = pygame.image.load("/home/prabhas/Desktop/projects/sprites/gameover.png")
-pipe_surface = pygame.image.load("/home/prabhas/Desktop/projects/sprites/pipe-green.png")
+starting_page = pygame.image.load(f"{location}/sprites/message.png")
+ending_page = pygame.image.load(f"{location}/sprites/gameover.png")
+pipe_surface = pygame.image.load(f"{location}/sprites/pipe-green.png")
 
 
 pipe_rect1 = pipe_surface.get_rect(midtop = (800,250))
